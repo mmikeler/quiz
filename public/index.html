@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -25,10 +25,76 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <script>
+      window.quizOptions = {
+        steps: [
+          {
+            question: 'Заголовок первого шага',
+            fieldType: 'radio',
+            fieldName: 'field_name_1',
+            variants: [
+              {
+                answer: 'Первый вариант',
+                value: null
+              },
+              {
+                answer: 'Второй вариант',
+                value: null
+              },
+              {
+                answer: 'Третий вариант',
+                value: null
+              }
+            ]
+          },
+          {
+            question: 'Заголовок второго шага',
+            fieldType: 'radio',
+            fieldName: 'field_name_2',
+            variants: [
+              {
+                answer: 'Первый вариант',
+                value: null
+              },
+              {
+                answer: 'Второй вариант',
+                value: null
+              },
+              {
+                answer: 'Третий вариант',
+                value: null
+              }
+            ]
+          },
+          {
+            question: 'Укажите данные для связи',
+            fieldType: 'submit',
+            fields: [
+              { label: 'Ваше имя', fieldName: 'username', required: true },
+              { label: 'Ваш телефон', fieldName: 'phone', required: true },
+              { label: 'Ваш имейл', fieldName: 'email', required: false }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      .container{
+        max-width: 900px;
+        margin: auto;
+        padding: 15px;
+        margin-top: 100px;
+      }
+    </style>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div class="container">
+      <div id="quiz"></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
